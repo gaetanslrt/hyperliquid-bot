@@ -32,7 +32,7 @@ def execute_xau_long():
     COIN = "xyz:GOLD" 
     DISTANCE_SL = 7.0  
     LEVIER_MAX = 25     
-    TAILLE_MAX = 0.65   
+    TAILLE_MAX = 100.0
     
     print("\n" + "="*40)
     print("🚀 DÉMARRAGE SÉQUENCE : AUTONOMOUS EXECUTION 🚀")

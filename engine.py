@@ -30,7 +30,7 @@ def execute_xau_long():
     # --- PARAMÈTRES STRATÉGIQUES FIXES ---
     RISQUE = 0.05
     COIN = "xyz:GOLD" 
-    DISTANCE_SL = 7.0  
+    DISTANCE_SL = 13.0  
     LEVIER_MAX = 25     
     TAILLE_MAX = 100.0
     

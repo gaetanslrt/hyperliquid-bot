@@ -24,3 +24,8 @@ async def receive_webhook(payload: WebhookPayload, background_tasks: BackgroundT
     background_tasks.add_task(execute_xau_long)
     
     return {"status": "success", "message": "Ordre d'achat autonome initié"}
+
+# 🩺 Endpoint de Health Check pour UptimeRobot
+@app.get("/")
+async def health_check():
+    return {"status": "Usine en ligne et prete a tirer"}

@@ -20,7 +20,7 @@ def calc_taille_pos(capital, risque, entree, sl):
 
 def calc_take_profit(entree, sl):
     distance_sl = abs(entree - sl)
-    return entree + (distance_sl * 2.5) 
+    return entree + (distance_sl * 1.1) 
 
 # ==========================================
 # 2. MOTEUR D'EXÉCUTION BLOCKCHAIN 100% AUTONOME
@@ -30,9 +30,9 @@ def execute_xau_long():
     # --- PARAMÈTRES STRATÉGIQUES FIXES ---
     RISQUE = 0.05
     COIN = "xyz:GOLD" 
-    DISTANCE_SL = 15.0  # A modifier si on touche les SL trop souvent
+    DISTANCE_SL = 20.0  # A modifier si on touche les SL trop souvent
     LEVIER_MAX = 25     
-    TAILLE_MAX = 100.0
+    TAILLE_MAX = 120.0
     
     print("\n" + "="*40)
     print("🚀 DÉMARRAGE SÉQUENCE : AUTONOMOUS EXECUTION 🚀")

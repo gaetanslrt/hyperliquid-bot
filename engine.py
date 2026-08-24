@@ -28,7 +28,7 @@ def calc_take_profit(entree, sl):
 
 def execute_xau_long():
     # --- PARAMÈTRES STRATÉGIQUES FIXES ---
-    RISQUE = 0.05
+    RISQUE = 0.10
     COIN = "xyz:GOLD" 
     DISTANCE_SL = 20.0  # A modifier si on touche les SL trop souvent
     LEVIER_MAX = 25     

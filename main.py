@@ -7,7 +7,6 @@ from engine import execute_xau_long
 load_dotenv()
 app = FastAPI()
 
-# Le modèle ne demande plus que le mot de passe
 class WebhookPayload(BaseModel):
     passphrase: str
 
@@ -19,13 +18,11 @@ async def receive_webhook(payload: WebhookPayload, background_tasks: BackgroundT
         raise HTTPException(status_code=403, detail="Accès refusé : Mot de passe incorrect")
     
     print("\n🔔 [WEBHOOK REÇU] Signal d'achat déclenché par TradingView !")
-    
-    # On lance le moteur sans lui passer aucun argument
+
     background_tasks.add_task(execute_xau_long)
     
     return {"status": "success", "message": "Ordre d'achat autonome initié"}
 
-# 🩺 Endpoint de Health Check pour UptimeRobot
 @app.get("/")
 async def health_check():
     return {"status": "Usine en ligne et prete a tirer"}
